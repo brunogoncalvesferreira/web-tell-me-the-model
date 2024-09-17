@@ -34,9 +34,6 @@ export function AuthProvider({ children }: AuthProps) {
       const response = await api.post(
         '/sessions',
         { email, password },
-        {
-          withCredentials: true,
-        },
       )
       const { user } = response.data
       localStorage.setItem('@app-tell-me-the-model:user', JSON.stringify(user))

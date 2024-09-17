@@ -13,6 +13,7 @@ export function CreateCompatibleModel() {
   useEffect(() => {
     async function fetchFilm() {
       const response = await api.get(`/films/${id}`);
+      console.log(response.data)
       setData(response.data);
     }
     fetchFilm();
