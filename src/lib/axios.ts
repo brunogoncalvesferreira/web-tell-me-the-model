@@ -1,6 +1,6 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "https://api-vortice-tell-me-the-model.onrender.com/",
+  baseURL: "http://localhost:3000",
   withCredentials: true,
 })
