@@ -38,8 +38,6 @@ export function AuthProvider({ children }: AuthProps) {
       const { user } = response.data
       localStorage.setItem('@app-tell-me-the-model:user', JSON.stringify(user))
 
-      toast.success('Login efetuado com sucesso!')
-
       setData({ user })
     } catch (error) {
       if (error) {
