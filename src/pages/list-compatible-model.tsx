@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { FilmsProps } from "../types/interface";
 import { api } from "../lib/axios";
+import { toast } from "sonner";
+import { Trash2 } from "lucide-react";
 
 export function ListCompatibleModel() {
   const [listFilmsCompatibles, setListFilmsCompatibles] = useState(
@@ -21,6 +23,13 @@ export function ListCompatibleModel() {
 
   function goToBack() {
     navigate(-1);
+  }
+
+  async function handleDeleteCompatibleModel(id: string) {
+    await api.delete(`/compatible-films/${id}`).then(() => {
+      fetchFilmsComplatibles();
+      toast.success("Modelo deletado com sucesso!");
+    });
   }
 
   return (
@@ -48,7 +57,12 @@ export function ListCompatibleModel() {
               className="flex items-center justify-between gap-2 p-3 border-b border-zinc-700/30"
             >
               <p className="font-bold uppercase">{film.model}</p>
+              <div className="flex items-center gap-2">
               <p className="uppercase">{film.mark}</p>
+              <button className="hover:text-red-500" onClick={() => handleDeleteCompatibleModel(film.id)}>
+                <Trash2 className="size-5"/>
+              </button>
+              </div>
             </li>
           ))}
         </ul>
