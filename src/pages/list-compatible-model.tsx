@@ -4,6 +4,7 @@ import { FilmsProps } from "../types/interface";
 import { api } from "../lib/axios";
 import { toast } from "sonner";
 import { Trash2 } from "lucide-react";
+import { useAuth } from "../hooks/auth";
 
 export function ListCompatibleModel() {
   const [listFilmsCompatibles, setListFilmsCompatibles] = useState(
@@ -11,6 +12,9 @@ export function ListCompatibleModel() {
   );
   const { id } = useParams();
   const navigate = useNavigate();
+
+
+  const { user } = useAuth()
 
   async function fetchFilmsComplatibles() {
     const response = await api.get(`/films/${id}`);
@@ -59,9 +63,11 @@ export function ListCompatibleModel() {
               <p className="font-bold uppercase">{film.model}</p>
               <div className="flex items-center gap-2">
               <p className="uppercase">{film.mark}</p>
-              <button className="hover:text-red-500" onClick={() => handleDeleteCompatibleModel(film.id)}>
+              {user && (
+                <button className="hover:text-red-500" onClick={() => handleDeleteCompatibleModel(film.id)}>
                 <Trash2 className="size-5"/>
               </button>
+              )}
               </div>
             </li>
           ))}
