@@ -146,10 +146,17 @@ export function Home() {
     navigate(`/list-compatible-models/${id}`);
   }
 
+  function handleDeleteFilm(id: string) {
+    api.delete(`/films/${id}`).then(() => {
+      fetchFilms();
+      toast.success("Filme deletado com sucesso!");
+    });
+  }
+
   return (
     <div className="py-10">
       <h1 className="md:text-4xl text-lg text-zinc-100 font-bold">
-        Bem-vindo ao Tell me the model📱!
+        Bem-vindo ao Tell Me The Model!📱
       </h1>
 
       <div className="flex md:flex-row flex-col-reverse md:gap-0 gap-4 md:space-x-3 space-x-0  mt-10">
@@ -184,6 +191,7 @@ export function Home() {
             user={user}
             onCreateCompatibleModel={handleCreateCompatibleModel}
             onGetAllCompatibleModel={handleGetAllCompatibleModel}
+            onDeleteFilm={handleDeleteFilm}
           />
 
           <div className="flex items-center md:justify-start justify-between gap-3 mt-3">

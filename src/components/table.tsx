@@ -1,4 +1,4 @@
-import { PlusCircleIcon, SquareArrowOutUpRight } from "lucide-react";
+import { PlusCircleIcon, SquareArrowOutUpRight, Trash2 } from "lucide-react";
 import { FilmsProps, UserProps } from "../types/interface";
 import { useAuth } from "../hooks/auth";
 
@@ -7,12 +7,14 @@ interface TableProps {
   user?: UserProps;
   onCreateCompatibleModel: (id: string) => void;
   onGetAllCompatibleModel: (id: string) => void;
+  onDeleteFilm: (id: string) => void;
 }
 
 export function Table({
   data,
   onCreateCompatibleModel,
   onGetAllCompatibleModel,
+  onDeleteFilm
 }: TableProps) {
   const { user } = useAuth();
 
@@ -32,6 +34,12 @@ export function Table({
               <th style={{ width: 200 }} className="p-4">
                 Criação compativeis
               </th>
+            )}
+
+            {user && (
+              <th style={{ width: 200 }} className="p-4">
+                Deletar
+              </th> 
             )}
           </tr>
         </thead>
@@ -54,6 +62,14 @@ export function Table({
                 <td className="p-4 text-center">
                   <button onClick={() => onCreateCompatibleModel(film.id)}>
                     <PlusCircleIcon className="size-5" />
+                  </button>
+                </td>
+              )}
+
+              {user && (
+                <td className="p-4 text-center">
+                  <button onClick={() => onDeleteFilm(film.id)}>
+                    <Trash2 className="size-5" />
                   </button>
                 </td>
               )}
