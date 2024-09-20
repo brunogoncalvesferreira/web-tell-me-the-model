@@ -149,7 +149,7 @@ export function Home() {
   function handleDeleteFilm(id: string) {
     api.delete(`/films/${id}`).then(() => {
       fetchFilms();
-      toast.success("Filme deletado com sucesso!");
+      toast.success("Modelo deletado com sucesso!");
     });
   }
 

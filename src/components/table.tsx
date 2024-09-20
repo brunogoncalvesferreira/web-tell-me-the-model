@@ -37,7 +37,7 @@ export function Table({
             )}
 
             {user && (
-              <th style={{ width: 200 }} className="p-4">
+              <th style={{ width: 100 }} className="p-4">
                 Deletar
               </th> 
             )}
@@ -68,7 +68,7 @@ export function Table({
 
               {user && (
                 <td className="p-4 text-center">
-                  <button onClick={() => onDeleteFilm(film.id)}>
+                  <button className="hover:text-red-500 transition-colors" onClick={() => onDeleteFilm(film.id)}>
                     <Trash2 className="size-5" />
                   </button>
                 </td>
