@@ -26,8 +26,8 @@ export function Table({
             <th className="p-4">Modelo</th>
             <th className="p-4">Marca</th>
 
-            <th style={{ width: 200 }} className="p-4">
-              Ver compativeis
+            <th style={{ width: 300 }} className="p-4">
+              Compativeis
             </th>
 
             {user && (
@@ -52,7 +52,7 @@ export function Table({
             >
               <td className="p-4 font-bold uppercase">{film.model}</td>
               <td className="p-4 uppercase">{film.mark}</td>
-              <td className="p-4 text-center">
+              <td className="p-4 text-left">
                 <button onClick={() => onGetAllCompatibleModel(film.id)}>
                   <SquareArrowOutUpRight className="size-5" />
                 </button>
