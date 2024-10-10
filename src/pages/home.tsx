@@ -81,7 +81,7 @@ export function Home() {
 
   async function fetchFilms() {
     const url = new URL(
-      "https://api-vortice-tell-me-the-model.onrender.com/films/search"
+      "https://api-vortice-tell-me-the-model-508231204334.us-west1.run.app/films/search"
     );
     url.searchParams.set("pageIndex", String(page - 1));
 
