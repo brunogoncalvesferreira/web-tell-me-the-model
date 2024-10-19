@@ -26,7 +26,7 @@ export function Table({
             <th className="p-4">Modelo</th>
             <th className="p-4">Marca</th>
 
-            <th style={{ width: 300 }} className="p-4">
+            <th style={{ width: 100 }} className="p-4">
               Compativeis
             </th>
 

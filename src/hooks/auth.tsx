@@ -29,6 +29,7 @@ interface AuthProps {
 export function AuthProvider({ children }: AuthProps) {
   const [data, setData] = useState<UserData>({} as UserData)
 
+
   async function signIn({ email, password }: SessionsProps) {
     try {
       const response = await api.post(
@@ -39,11 +40,12 @@ export function AuthProvider({ children }: AuthProps) {
       localStorage.setItem('@app-tell-me-the-model:user', JSON.stringify(user))
 
       setData({ user })
+      toast.success('Login realizado com sucesso!')
     } catch (error) {
       if (error) {
         const err = error as CustomError
         if (err.response) {
-          toast.error(JSON.stringify(err.response.data))
+          toast.error(JSON.stringify(err.response.data.message))
         } else {
           toast.error('Erro inesperado. Tente novamente mais tarde!')
         }

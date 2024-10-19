@@ -4,7 +4,7 @@ import { toast } from 'sonner'
 import { AtSign, Lock } from 'lucide-react'
 import { LoadingButton } from '../components/loading-button'
 import { useNavigate } from 'react-router-dom'
-import { CustomError } from '../types/interface'
+
 
 export function SignIn() {
   const [isLoading, setIsLoading] = useState(false)
@@ -26,23 +26,9 @@ export function SignIn() {
     setIsLoading(true)
 
     await signIn({ email, password })
-      .then(() => {
-        toast.success('Login efetuado com sucesso!')
+      .then(() => { 
         setIsLoading(false)
         navigate('/')
-      })
-      .catch((error) => {
-        if(error as CustomError) {
-          const err = error as CustomError
-          if (err.response) {
-            toast.error(JSON.stringify(err.response.data.message))
-            setIsLoading(false)
-            return 
-          } else {
-            toast.error('Erro inesperado. Tente novamente mais tarde!')
-          }
-        }
-        setIsLoading(false)
       })
   }
 
