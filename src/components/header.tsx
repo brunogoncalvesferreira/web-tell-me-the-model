@@ -10,6 +10,7 @@ export function Header({ signOut }: HeaderProps) {
   const { user } = useAuth()
   return (
     <header className="flex items-center justify-between border-b border-zinc-700/30 py-10">
+      <meta name="google-adsense-account" content="ca-pub-9759786305944347"></meta>
         <Link to="/">
           <img className="size-10" src="/logo.svg" alt="Logo da aplicação Tell Me The Model" />
         </Link>
