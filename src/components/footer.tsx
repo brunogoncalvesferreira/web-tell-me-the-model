@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
-    <footer className="flex  flex-col gap-4 items-center justify-between py-4 mt-10">
-      <div>
+    <footer className="flex flex-col gap-4 items-center justify-center py-4 mt-10">
+      <div className="text-center">
         <span className="text-zinc-300 text-sm font-light">
           Vortice Consulting & Tech -
         </span>
