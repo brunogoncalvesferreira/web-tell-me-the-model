@@ -8,12 +8,12 @@ export function LayoutDefault() {
 
   return (
     <div  className="max-w-5xl w-full mx-auto px-4 flex flex-col h-screen">
-      <Header  signOut={signOut}/>
+      {/* <Header  signOut={signOut}/> */}
       <main className="flex-1">
         <Outlet />
       </main>
 
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   )
 }
