@@ -1,4 +1,4 @@
-import { PlusCircle, Search } from "lucide-react";
+/* import { PlusCircle, Search } from "lucide-react";
 import { ButtonsControls } from "../components/buttons-controls";
 import { FormEvent, useEffect, useState } from "react";
 import { CustomError, FilmsProps } from "../types/interface";
@@ -8,7 +8,7 @@ import { useAuth } from "../hooks/auth";
 import { Table } from "../components/table";
 import { CreateNewModel } from "../components/create-new-model";
 import { useNavigate } from "react-router-dom";
-import { LoadingTable } from "../components/loading-table";
+import { LoadingTable } from "../components/loading-table"; */
 
 export function Home() {
   /* const [films, setFilms] = useState<FilmsProps[]>([]);
