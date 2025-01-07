@@ -1,4 +1,4 @@
-/* import { PlusCircle, Search } from "lucide-react";
+import { PlusCircle, Search } from "lucide-react";
 import { ButtonsControls } from "../components/buttons-controls";
 import { FormEvent, useEffect, useState } from "react";
 import { CustomError, FilmsProps } from "../types/interface";
@@ -8,10 +8,10 @@ import { useAuth } from "../hooks/auth";
 import { Table } from "../components/table";
 import { CreateNewModel } from "../components/create-new-model";
 import { useNavigate } from "react-router-dom";
-import { LoadingTable } from "../components/loading-table"; */
+import { LoadingTable } from "../components/loading-table";
 
 export function Home() {
-  /* const [films, setFilms] = useState<FilmsProps[]>([]);
+ const [films, setFilms] = useState<FilmsProps[]>([]);
   const [modalCreateFilm, setModalCreateFilm] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const { user } = useAuth();
@@ -151,14 +151,11 @@ export function Home() {
       fetchFilms();
       toast.success("Modelo deletado com sucesso!");
     });
-  } */
+  }
 
   return (
-    <div className="grid place-items-center h-screen px-4">
-      <h1 className="text-3xl text-center">Estamos em manutenção, voltaremos em breve!</h1>
-    </div>
-  )
-    {/* <div className="py-10">
+
+    <div className="py-10">
       <h1 className="md:text-4xl text-lg text-zinc-100 font-bold">
         Bem-vindo ao Tell Me The Model!📱
       </h1>
@@ -226,5 +223,7 @@ export function Home() {
           createFilm={createFilm}
         />
       )}
-    </div> */}
+    </div>
+  )
+    
 }
