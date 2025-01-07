@@ -10,6 +10,8 @@ import { CreateNewModel } from "../components/create-new-model";
 import { useNavigate } from "react-router-dom";
 import { LoadingTable } from "../components/loading-table";
 
+const fetchURL = 'http://localhost:5173'
+
 export function Home() {
  const [films, setFilms] = useState<FilmsProps[]>([]);
   const [modalCreateFilm, setModalCreateFilm] = useState(false);
@@ -81,7 +83,7 @@ export function Home() {
 
   async function fetchFilms() {
     const url = new URL(
-      "https://api-vortice-tell-me-the-model-508231204334.us-west1.run.app/films/search"
+      `${fetchURL}/films/search`
     );
     url.searchParams.set("pageIndex", String(page - 1));
 
