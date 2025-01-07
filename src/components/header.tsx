@@ -9,7 +9,7 @@ interface HeaderProps {
 export function Header({ signOut }: HeaderProps) {
   const { user } = useAuth();
   return (
-    <header className="flex items-center justify-between border-b border-zinc-700/30 py-10">
+    <header className="flex items-center justify-between border-b border-zinc-700/30 py-3">
       <Link to="/">
         <img
           className="size-10"

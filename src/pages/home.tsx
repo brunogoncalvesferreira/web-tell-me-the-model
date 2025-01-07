@@ -156,8 +156,8 @@ export function Home() {
   }
 
   return (
-
     <div className="py-10">
+
       <h1 className="md:text-4xl text-lg text-zinc-100 font-bold">
         Bem-vindo ao Tell Me The Model!📱
       </h1>
