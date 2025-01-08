@@ -10,7 +10,7 @@ import { CreateNewModel } from "../components/create-new-model";
 import { useNavigate } from "react-router-dom";
 import { LoadingTable } from "../components/loading-table";
 
-const fetchURL = 'http://localhost:3000'
+const fetchURL = 'https://apitm.apis-vortice.online'
 
 export function Home() {
  const [films, setFilms] = useState<FilmsProps[]>([]);
