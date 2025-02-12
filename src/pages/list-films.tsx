@@ -11,8 +11,8 @@ import { useNavigate } from 'react-router-dom'
 import { LoadingTable } from '../components/loading-table'
 import { AlertPayment } from '../components/alert-payment'
 
-//const fetchURL = 'https://apitm.apis-vortice.online'
-const fetchURL = 'http://localhost:3000'
+const fetchURL = 'https://apitm.apis-vortice.online'
+//const fetchURL = 'http://localhost:3000'
 
 export function ListFilms() {
   const [films, setFilms] = useState<FilmsProps[]>([])
