@@ -96,6 +96,7 @@ export function ListFilms() {
     fetch(url)
       .then((response) => {
         if (response.status === 402) {
+          console.log(response.status)
           setIsOpenModalPayment(true)
           return null
         }
