@@ -27,7 +27,7 @@ export function Table({
           <tr className='text-left border-b border-zinc-700/30'>
             <th className='p-4'>Modelo</th>
 
-            <th className='p-4'>Compativeis</th>
+            <th className='p-4 '>Compativeis</th>
             <th style={{ width: 200 }} className='p-4'>
               Marca
             </th>
@@ -62,6 +62,7 @@ export function Table({
                   </button>
                 ) : (
                   <button
+                    className='flex items-center justify-center w-[90px]'
                     onClick={
                       index >= 5
                         ? () => onPayment(index)

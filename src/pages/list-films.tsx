@@ -11,8 +11,8 @@ import { useNavigate } from 'react-router-dom'
 import { LoadingTable } from '../components/loading-table'
 import { AlertPayment } from '../components/alert-payment'
 
-const fetchURL = 'https://apitm.apis-vortice.online'
-//const fetchURL = 'http://localhost:3000'
+//const fetchURL = 'https://apitm.apis-vortice.online'
+const fetchURL = 'http://localhost:3000'
 
 export function ListFilms() {
   const [films, setFilms] = useState<FilmsProps[]>([])
@@ -167,7 +167,7 @@ export function ListFilms() {
   return (
     <div className='py-10'>
       <h1 className='md:text-4xl text-lg text-zinc-100 font-bold'>
-        Bem-vindo ao Tell Me The Model!📱
+        Bem-vindo ao TM3D📱
       </h1>
 
       <div className='flex md:flex-row flex-col-reverse md:gap-0 gap-4 md:space-x-3 space-x-0  mt-10'>
