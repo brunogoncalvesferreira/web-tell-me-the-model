@@ -2,7 +2,7 @@ import { PlusCircle, Search } from 'lucide-react'
 import { ButtonsControls } from '../components/buttons-controls'
 import { FormEvent, useEffect, useState } from 'react'
 import { CustomError, FilmsProps } from '../types/interface'
-import { api } from '../lib/axios'
+import { api, fetchURL } from '../lib/axios'
 import { toast } from 'sonner'
 import { useAuth } from '../hooks/auth'
 import { Table } from '../components/table'
@@ -10,9 +10,6 @@ import { CreateNewModel } from '../components/create-new-model'
 import { useNavigate } from 'react-router-dom'
 import { LoadingTable } from '../components/loading-table'
 import { AlertPayment } from '../components/alert-payment'
-
-const fetchURL = 'https://apitm.apis-vortice.online'
-//const fetchURL = 'http://localhost:3000'
 
 export function ListFilms() {
   const [films, setFilms] = useState<FilmsProps[]>([])
