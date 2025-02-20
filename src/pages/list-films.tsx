@@ -82,7 +82,7 @@ export function ListFilms() {
   }
 
   async function fetchFilms(itemIndex: number) {
-    const url = new URL(`${fetchURL}/films/search`)
+    const url = new URL(fetchURL)
     url.searchParams.set('pageIndex', String(page - 1))
     url.searchParams.set('itemIndex', String(itemIndex))
 
@@ -90,19 +90,13 @@ export function ListFilms() {
       url.searchParams.set('query', search.toLocaleUpperCase())
     }
 
-    fetch(url)
-      .then((response) => {
-        if (response.status === 402) {
-          console.log(response.status)
-          setIsOpenModalPayment(true)
-          return null
-        }
-        return response.json()
-      })
-      .then((data) => {
-        setFilms(data.result)
-        setTotalPags(data.totalPages)
-      })
+    await api.get(url.toString()).then((response) => {
+      if (response.status === 402) {
+        console.log(response.status)
+        setIsOpenModalPayment(true)
+        return null
+      }
+    })
   }
 
   function setCurrentSearch(search: string) {
