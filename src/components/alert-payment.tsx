@@ -17,7 +17,7 @@ export function AlertPayment({ setIsOpenModalPayment }: AlertPaymentProps) {
   }
 
   return (
-    <div className='absolute inset-0 flex items-center justify-center'>
+    <div className='fixed inset-0 flex items-center justify-center'>
       <div className='bg-zinc-800 md:max-w-md w-full h-auto p-8 rounded-md flex flex-col gap-4'>
         <h1 className='text-2xl text-zinc-100'>
           {' '}
