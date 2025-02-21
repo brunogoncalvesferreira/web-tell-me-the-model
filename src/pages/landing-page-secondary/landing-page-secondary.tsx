@@ -7,6 +7,7 @@ import { Header } from './header'
 import { Depoiments } from './depoiments'
 import { Plans } from './plans'
 import { AdvantagesOfUse } from './advantages-of-use'
+import { Footer } from '@/components/footer'
 
 export function LandingPageSecondary() {
   return (
@@ -147,18 +148,7 @@ export function LandingPageSecondary() {
         <Faq />
       </section>
 
-      <footer className='bg-zinc-900 text-white text-center py-6'>
-        <p>© 2025 Vórtice Consulting e Tech</p>
-        <p>
-          <a href='#' className='text-lime-400 hover:text-lime-300'>
-            Política de Privacidade
-          </a>{' '}
-          |{' '}
-          <a href='#' className='text-lime-400 hover:text-lime-300'>
-            Termos de Uso
-          </a>
-        </p>
-      </footer>
+      <Footer />
     </div>
   )
 }
