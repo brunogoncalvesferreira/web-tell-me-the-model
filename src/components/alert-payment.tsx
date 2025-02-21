@@ -13,7 +13,7 @@ export function AlertPayment({ setIsOpenModalPayment }: AlertPaymentProps) {
 
   function handleNavigateLandingPage() {
     setIsOpenModalPayment(false)
-    navigate('/home')
+    navigate('/tabela-pelicula-3d')
   }
 
   return (

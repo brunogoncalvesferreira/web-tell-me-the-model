@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from './ui/accordion'
+} from '@/components/ui/accordion'
 
 const topics = [
   {
@@ -15,6 +15,11 @@ const topics = [
     id: 2,
     title: 'Quais formas de pagamento são aceitas?',
     description: 'Aceitamos Pix, boleto e cartão de crédito.',
+  },
+  {
+    id: 3,
+    title: 'Posso compartilhar meu acesso com outros vendedores da minha loja?',
+    description: 'Sim, cada assinatura aceita até 3 conexões simultâneas.',
   },
 ]
 

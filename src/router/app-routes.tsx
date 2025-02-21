@@ -1,19 +1,29 @@
 import { Route, Routes } from 'react-router-dom'
-import { Home } from '../pages/home'
-import { CreateCompatibleModel } from '../pages/create-compatible-model'
+import { LandingPageOne } from '../pages/landind-page-one/landing-page-one'
+import { CreateCompatibleModel } from '../pages/create-compatible-model/create-compatible-model'
 import { LayoutDefault } from '../layout/layout-default'
-import { ListCompatibleModel } from '../pages/list-compatible-model'
-import { SignIn } from '../pages/sign-in'
-import { TermsAndConditions } from '../pages/terms-and-conditions'
-import { PrivacyPolicy } from '../pages/privacy-policy'
-import { About } from '../pages/about'
-import { Contact } from '../pages/contact'
-import { ListFilms } from '../pages/list-films'
+import { ListCompatibleModel } from '../pages/list-compatible-model/list-compatible-model'
+import { SignIn } from '../pages/sign-in/sign-in'
+import { TermsAndConditions } from '../pages/terms-and-conditions/terms-and-conditions'
+import { PrivacyPolicy } from '../pages/privacy-policy/privacy-policy'
+import { About } from '../pages/about/about'
+import { Contact } from '../pages/contact/contact'
+import { ListFilms } from '../pages/list-films/list-films'
+import { LandingPageSecondary } from '@/pages/landing-page-secondary/landing-page-secondary'
+import { LandingPageTerciary } from '@/pages/landing-page-terciary/landing-page-terciary'
 
 export function AppRoutes() {
   return (
     <Routes>
-      <Route path='/home' element={<Home />} />
+      <Route path='/tabela-pelicula-3d' element={<LandingPageOne />} />
+      <Route
+        path='tabela-modelo-pelicula-3d-compativel'
+        element={<LandingPageSecondary />}
+      />
+      <Route
+        path='pelicula-3d-tabela-modelo-compativel'
+        element={<LandingPageTerciary />}
+      />
       <Route path='/' element={<LayoutDefault />}>
         <Route path='/' element={<ListFilms />} />
         <Route
