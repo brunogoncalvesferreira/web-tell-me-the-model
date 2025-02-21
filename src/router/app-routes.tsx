@@ -17,11 +17,11 @@ export function AppRoutes() {
     <Routes>
       <Route path='/tabela-pelicula-3d' element={<LandingPageOne />} />
       <Route
-        path='tabela-modelo-pelicula-3d-compativel'
+        path='/tabela-modelo-pelicula-3d-compativel'
         element={<LandingPageSecondary />}
       />
       <Route
-        path='pelicula-3d-tabela-modelo-compativel'
+        path='/pelicula-3d-tabela-modelo-compativel'
         element={<LandingPageTerciary />}
       />
       <Route path='/' element={<LayoutDefault />}>
