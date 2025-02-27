@@ -11,6 +11,7 @@ import { Contact } from '../pages/contact/contact'
 import { ListFilms } from '../pages/list-films/list-films'
 import { LandingPageSecondary } from '@/pages/landing-page-secondary/landing-page-secondary'
 import { LandingPageTerciary } from '@/pages/landing-page-terciary/landing-page-terciary'
+import { Payment } from '@/pages/payment/payment'
 
 export function AppRoutes() {
   return (
@@ -34,6 +35,8 @@ export function AppRoutes() {
           path='list-compatible-models/:id'
           element={<ListCompatibleModel />}
         />
+
+        <Route path='/process_payment' element={<Payment />} />
 
         <Route path='sign-in' element={<SignIn />} />
 

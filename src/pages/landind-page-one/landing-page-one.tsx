@@ -5,6 +5,7 @@ import motorola from '/motorola.png'
 import { Link } from 'react-router-dom'
 import { Plans } from '@/components/plans'
 import { Faq } from '@/components/faq'
+import { Footer } from '@/components/footer'
 
 const model = [
   {
@@ -31,7 +32,7 @@ const model = [
 
 export function LandingPageOne() {
   return (
-    <div className='pb-40'>
+    <div>
       <div className='max-w-7xl w-full mx-auto px-5'>
         {/* <Navigation /> */}
         <Link to='/'>
@@ -100,6 +101,8 @@ export function LandingPageOne() {
         </div>
 
         <Faq />
+
+        <Footer />
       </div>
     </div>
   )
