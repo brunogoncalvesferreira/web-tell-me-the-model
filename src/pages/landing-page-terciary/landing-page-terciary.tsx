@@ -120,17 +120,7 @@ export function LandingPageTerciary() {
         <h2 className='text-3xl font-extrabold'>Planos e Preços</h2>
         <div className='mt-8 flex flex-wrap justify-center gap-6'>
           <div className='bg-gray-800 p-6 rounded-lg shadow-md w-72'>
-            <h3 className='text-xl font-semibold text-lime-400'>Mensal</h3>
-            <p className='mt-2 text-gray-300'>R$ 14,90/mês</p>
-            <a
-              href='https://wa.me/32991144887'
-              className='mt-4 inline-block bg-lime-500 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-lime-600 transition'
-            >
-              Assine agora
-            </a>
-          </div>
-          <div className='bg-gray-800 p-6 rounded-lg shadow-md w-72'>
-            <h3 className='text-xl font-semibold text-lime-400'>Semestral</h3>
+            <h3 className='text-xl font-semibold text-lime-400'>3 Meses</h3>
             <p className='mt-2 text-gray-300'>R$ 39,90</p>
             <a
               href='https://wa.me/32991144887'
@@ -140,8 +130,18 @@ export function LandingPageTerciary() {
             </a>
           </div>
           <div className='bg-gray-800 p-6 rounded-lg shadow-md w-72'>
-            <h3 className='text-xl font-semibold text-lime-400'>Anual</h3>
+            <h3 className='text-xl font-semibold text-lime-400'>6 Meses</h3>
             <p className='mt-2 text-gray-300'>R$ 59,90</p>
+            <a
+              href='https://wa.me/32991144887'
+              className='mt-4 inline-block bg-lime-500 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-lime-600 transition'
+            >
+              Assine agora
+            </a>
+          </div>
+          <div className='bg-gray-800 p-6 rounded-lg shadow-md w-72'>
+            <h3 className='text-xl font-semibold text-lime-400'>1 Ano</h3>
+            <p className='mt-2 text-gray-300'>R$ 79,90</p>
             <a
               href='https://wa.me/32991144887'
               className='mt-4 inline-block bg-lime-500 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-lime-600 transition'

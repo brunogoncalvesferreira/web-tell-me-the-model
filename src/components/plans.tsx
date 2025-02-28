@@ -1,21 +1,23 @@
+import { Button } from './ui/button'
+
 const plans = [
   {
     id: 1,
-    name: 'Plano 1',
-    description: 'Descrição do Plano 1',
-    price: 9.99,
+    name: 'Pra começar',
+    description: '3 Meses',
+    price: 39.9,
   },
   {
     id: 2,
-    name: 'Plano 2',
-    description: 'Descrição do Plano 2',
-    price: 19.99,
+    name: 'O mais vendido',
+    description: '6 Meses',
+    price: 59.9,
   },
   {
     id: 3,
-    name: 'Plano 3',
-    description: 'Descrição do Plano 3',
-    price: 29.99,
+    name: 'O mais econômico',
+    description: '1 ano',
+    price: 79.99,
   },
 ]
 
@@ -29,7 +31,13 @@ export function Plans() {
         >
           <h3 className='text-2xl font-semibold'>{plan.name}</h3>
           <p className='text-sm text-zinc-400'>{plan.description}</p>
-          <p className='text-lg font-semibold'>${plan.price}</p>
+          <p className='text-lg font-semibold'>
+            R$ {plan.price.toFixed(2).replace('.', ',')}
+          </p>
+
+          <Button className='mt-4 inline-block bg-lime-500 text-zinc-900 px-4 py-2 rounded-lg font-semibold hover:bg-lime-600 transition'>
+            Assine agora
+          </Button>
         </div>
       ))}
     </div>

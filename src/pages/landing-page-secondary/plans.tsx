@@ -4,8 +4,8 @@ export function Plans() {
       <h2 className='text-3xl text-white font-bold mb-8'>Planos</h2>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
         <div className='bg-white p-6 rounded-lg shadow-lg'>
-          <h3 className='text-xl font-bold mb-2 text-zinc-900'>Mensal</h3>
-          <p className='text-lg text-zinc-700 mb-4'>R$ 14,90</p>
+          <h3 className='text-xl font-bold mb-2 text-zinc-900'>3 meses</h3>
+          <p className='text-lg text-zinc-700 mb-4'>R$ 39,90</p>
           <p className='text-zinc-600 mb-4'>Pra começar</p>
           <a
             href='https://wa.me/32991144887'
