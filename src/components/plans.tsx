@@ -17,7 +17,7 @@ const plans = [
     id: 3,
     name: 'O mais econômico',
     description: '1 ano',
-    price: 79.99,
+    price: 79.9,
   },
 ]
 
