@@ -2,6 +2,8 @@ import { LogOut } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../hooks/auth'
 
+import logo from '@/assets/images/logo.svg'
+
 interface HeaderProps {
   signOut: () => void
 }
@@ -13,7 +15,7 @@ export function Header({ signOut }: HeaderProps) {
       <Link to='/'>
         <img
           className='size-10'
-          src='/logo.svg'
+          src={logo}
           alt='Logo da aplicação Tell Me The Model'
         />
       </Link>

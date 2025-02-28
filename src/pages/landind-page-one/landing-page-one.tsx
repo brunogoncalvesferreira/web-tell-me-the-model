@@ -1,11 +1,14 @@
-import samsung from '/samsung.svg'
-import apple from '/apple.svg'
-import xiaomi from '/xiaomi.svg'
-import motorola from '/motorola.png'
 import { Link } from 'react-router-dom'
 import { Plans } from '@/components/plans'
 import { Faq } from '@/components/faq'
 import { Footer } from '@/components/footer'
+
+import image from '@/assets/images/image.png'
+
+import samsung from '@/assets/images/samsung.svg'
+import apple from '@/assets/images/apple.svg'
+import xiaomi from '@/assets/images/xiaomi.svg'
+import motorola from '@/assets/images/motorola.png'
 
 const model = [
   {
@@ -56,7 +59,7 @@ export function LandingPageOne() {
         <div className='mt-20 shadow-2xl shadow-lime-400 max-w-7xl mx-auto md:h-[600px] h-[400px]'>
           <img
             className='w-full border-2 border-lime-400 rounded-lg h-full md:object-top object-left object-cover'
-            src='/image.png'
+            src={image}
             alt='Imagem do sistema Tell Me The Model'
           />
         </div>
