@@ -36,7 +36,7 @@ export function AppRoutes() {
           element={<ListCompatibleModel />}
         />
 
-        <Route path='/process_payment' element={<Payment />} />
+        <Route path='/process_payment/:id' element={<Payment />} />
 
         <Route path='sign-in' element={<SignIn />} />
 

@@ -41,7 +41,7 @@ export function LandingPageOne() {
         <Link to='/'>
           <img
             className='size-10'
-            src='/logo.svg'
+            src='/images/logo.svg'
             alt='Logo da aplicação Tell Me The Model'
           />
         </Link>

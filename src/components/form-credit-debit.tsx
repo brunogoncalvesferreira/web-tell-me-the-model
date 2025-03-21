@@ -2,7 +2,7 @@ import { loadMercadoPago } from '@mercadopago/sdk-js'
 import { useEffect } from 'react'
 import { Button } from './ui/button'
 import { api } from '@/lib/axios'
-import { Input } from './ui/input'
+
 import {
   Card,
   CardContent,
@@ -24,7 +24,11 @@ declare global {
   }
 }
 
-export function FormCreditDebit() {
+interface FormCreditDebitProps {
+  price: number
+}
+
+export function FormCreditDebit({ price }: FormCreditDebitProps) {
   useEffect(() => {
     const initializeCardForm = async () => {
       await loadMercadoPago()
@@ -33,7 +37,7 @@ export function FormCreditDebit() {
       )
 
       const cardForm = mp.cardForm({
-        amount: '100.5',
+        amount: String(price),
         iframe: true,
         form: {
           id: 'form-checkout',
@@ -94,8 +98,6 @@ export function FormCreditDebit() {
               identificationType,
             } = cardForm.getCardFormData()
 
-            console.log(token)
-
             api.post('/process_payment', {
               token,
               issuer_id,
@@ -103,15 +105,12 @@ export function FormCreditDebit() {
               transaction_amount: Number(amount),
               installments: Number(installments),
               description: 'Descrição do produto',
-              payer: {
-                email,
-                identification: {
-                  type: identificationType,
-                  number: identificationNumber,
-                },
-              },
+              email,
+              identificationType,
+              identificationNumber,
             })
           },
+
           onFetching: (resource: any) => {
             console.log('Fetching resource: ', resource)
 
@@ -157,44 +156,39 @@ export function FormCreditDebit() {
         </CardHeader>
         <CardContent>
           <form id='form-checkout' className='flex flex-col gap-10'>
-            {/** Dados pessoais */}
             <div className='flex gap-2'>
               <div className='flex-1'>
-                <Input
-                  className='text-zinc-100 border border-zinc-700/30 h-12 rounded-lg px-4'
+                <input
+                  className='bg-transparent w-full text-zinc-100 border border-zinc-700/30 h-12 rounded-lg px-4'
                   type='text'
                   id='form-checkout__cardholderName'
                 />
               </div>
 
               <div className='w-96'>
-                <Input
-                  className='text-zinc-100 border border-zinc-700/30 h-12 rounded-lg px-4'
+                <input
+                  className='bg-transparent w-full text-zinc-100 border border-zinc-700/30 h-12 rounded-lg px-4'
                   type='email'
                   id='form-checkout__cardholderEmail'
                 />
               </div>
             </div>
 
-            {/** Dados do cartão */}
             <div className='flex gap-2'>
-              <Input
+              <div
                 id='form-checkout__cardNumber'
-                className='text-zinc-100 border border-zinc-700/30 h-12 rounded-lg px-4'
-              ></Input>
-
-              <Input
+                className='px-2 text-zinc-100 border border-zinc-700/30 h-12 rounded-lg'
+              ></div>
+              <div
                 id='form-checkout__expirationDate'
-                className='text-zinc-100 border border-zinc-700/30 h-12 rounded-lg px-4'
-              ></Input>
-
-              <Input
+                className='px-2 text-zinc-100 border border-zinc-700/30 h-12 rounded-lg'
+              ></div>
+              <div
                 id='form-checkout__securityCode'
-                className='text-zinc-100 border border-zinc-700/30 h-12 rounded-lg px-4'
-              ></Input>
+                className='px-2 text-zinc-100 border border-zinc-700/30 h-12 rounded-lg'
+              ></div>
             </div>
 
-            {/** Dados do pagamento */}
             <div className='flex gap-2'>
               <select
                 className='w-full border border-zinc-700/30 h-12 rounded-lg px-4 bg-zinc-900 text-zinc-500'
@@ -207,19 +201,17 @@ export function FormCreditDebit() {
               ></select>
             </div>
 
-            {/** Dado de identificação pessoal */}
             <div className='flex gap-2'>
               <select
                 className='w-72 border border-zinc-700/30 h-12 rounded-lg px-4 bg-zinc-900 text-zinc-500'
                 id='form-checkout__identificationType'
               ></select>
-              <Input
-                className='text-zinc-100 border border-zinc-700/30 h-12 rounded-lg px-4'
+              <input
+                className='bg-transparent text-zinc-100 border border-zinc-700/30 h-12 rounded-lg px-4'
                 type='text'
                 id='form-checkout__identificationNumber'
               />
             </div>
-
             <Button
               className='bg-lime-400 text-zinc-950 font-bold text-lg h-12 rounded-lg hover:bg-lime-500 transition-all'
               type='submit'
@@ -227,7 +219,6 @@ export function FormCreditDebit() {
             >
               Pagar
             </Button>
-
             <Progress
               value={10}
               className='progress-bar w-full bg-lime-400 border border-zinc-700/40'

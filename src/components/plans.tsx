@@ -1,6 +1,7 @@
+import { useNavigate } from 'react-router-dom'
 import { Button } from './ui/button'
 
-const plans = [
+export const plans = [
   {
     id: 1,
     name: 'Pra começar',
@@ -22,6 +23,12 @@ const plans = [
 ]
 
 export function Plans() {
+  const navigate = useNavigate()
+
+  function handleNavigatePayment(id: number) {
+    navigate(`/process_payment/${id}`)
+  }
+
   return (
     <div className='grid md:grid-cols-3 grid-cols-1 gap-4'>
       {plans.map((plan) => (
@@ -35,7 +42,10 @@ export function Plans() {
             R$ {plan.price.toFixed(2).replace('.', ',')}
           </p>
 
-          <Button className='mt-4 inline-block bg-lime-500 text-zinc-900 px-4 py-2 rounded-lg font-semibold hover:bg-lime-600 transition'>
+          <Button
+            onClick={() => handleNavigatePayment(plan.id)}
+            className='mt-4 inline-block bg-lime-500 text-zinc-900 px-4 py-2 rounded-lg font-semibold hover:bg-lime-600 transition'
+          >
             Assine agora
           </Button>
         </div>
