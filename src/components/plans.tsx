@@ -6,7 +6,7 @@ export const plans = [
     id: 1,
     name: 'Pra começar',
     description: '3 Meses',
-    price: 39.9,
+    price: 1.49,
   },
   {
     id: 2,
