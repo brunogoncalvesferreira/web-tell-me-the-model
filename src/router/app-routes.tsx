@@ -12,6 +12,7 @@ import { ListFilms } from '../pages/list-films/list-films'
 import { LandingPageSecondary } from '@/pages/landing-page-secondary/landing-page-secondary'
 import { LandingPageTerciary } from '@/pages/landing-page-terciary/landing-page-terciary'
 import { Payment } from '@/pages/payment/payment'
+import { Register } from '@/pages/register/register'
 
 export function AppRoutes() {
   return (
@@ -45,6 +46,8 @@ export function AppRoutes() {
         <Route path='/termos-e-condicoes' element={<TermsAndConditions />} />
         <Route path='/politica-de-privacidade' element={<PrivacyPolicy />} />
       </Route>
+
+      <Route path='/register-user-tm' element={<Register />} />
     </Routes>
   )
 }
