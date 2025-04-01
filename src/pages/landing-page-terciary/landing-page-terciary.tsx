@@ -123,7 +123,8 @@ export function LandingPageTerciary() {
             <h3 className='text-xl font-semibold text-lime-400'>3 Meses</h3>
             <p className='mt-2 text-gray-300'>R$ 39,90</p>
             <a
-              href='https://wa.me/32991144887'
+              href='https://checkout-mp.vorticehub.com.br/mp3990.php'
+              target='_blank'
               className='mt-4 inline-block bg-lime-500 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-lime-600 transition'
             >
               Assine agora
@@ -133,7 +134,8 @@ export function LandingPageTerciary() {
             <h3 className='text-xl font-semibold text-lime-400'>6 Meses</h3>
             <p className='mt-2 text-gray-300'>R$ 59,90</p>
             <a
-              href='https://wa.me/32991144887'
+              href='https://checkout-mp.vorticehub.com.br/mp5990.php'
+              target='_blank'
               className='mt-4 inline-block bg-lime-500 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-lime-600 transition'
             >
               Assine agora
@@ -143,7 +145,8 @@ export function LandingPageTerciary() {
             <h3 className='text-xl font-semibold text-lime-400'>1 Ano</h3>
             <p className='mt-2 text-gray-300'>R$ 79,90</p>
             <a
-              href='https://wa.me/32991144887'
+              href='https://checkout-mp.vorticehub.com.br/mp7990.php'
+              target='_blank'
               className='mt-4 inline-block bg-lime-500 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-lime-600 transition'
             >
               Assine agora

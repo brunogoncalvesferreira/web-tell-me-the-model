@@ -8,7 +8,8 @@ export function Plans() {
           <p className='text-lg text-zinc-700 mb-4'>R$ 39,90</p>
           <p className='text-zinc-600 mb-4'>Pra começar</p>
           <a
-            href='https://wa.me/32991144887'
+            href='https://checkout-mp.vorticehub.com.br/mp3990.php'
+            target='_blank'
             className='bg-orange-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-lime-500 transition duration-300'
           >
             Assine agora
@@ -19,7 +20,8 @@ export function Plans() {
           <p className='text-lg text-zinc-700 mb-4'>R$ 59,90</p>
           <p className='text-zinc-600 mb-4'>O mais vendido</p>
           <a
-            href='https://wa.me/32991144887'
+            href='https://checkout-mp.vorticehub.com.br/mp5990.php'
+            target='_blank'
             className='bg-orange-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-lime-500 transition duration-300'
           >
             Assine agora
@@ -30,7 +32,8 @@ export function Plans() {
           <p className='text-lg text-zinc-700 mb-4'>R$ 79,90</p>
           <p className='text-zinc-600 mb-4'>O mais econômico</p>
           <a
-            href='https://wa.me/32991144887'
+            href='https://checkout-mp.vorticehub.com.br/mp7990.php'
+            target='_blank'
             className='bg-orange-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-lime-500 transition duration-300'
           >
             Assine agora

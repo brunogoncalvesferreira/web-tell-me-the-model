@@ -1,24 +1,28 @@
 import { useNavigate } from 'react-router-dom'
 import { Button } from './ui/button'
+import { link } from 'fs'
 
 export const plans = [
   {
     id: 1,
     name: 'Pra começar',
     description: '3 Meses',
-    price: 1.49,
+    price: 39.9,
+    link: 'https://checkout-mp.vorticehub.com.br/mp3990.php',
   },
   {
     id: 2,
     name: 'O mais vendido',
     description: '6 Meses',
     price: 59.9,
+    link: 'https://checkout-mp.vorticehub.com.br/mp5990.php',
   },
   {
     id: 3,
     name: 'O mais econômico',
     description: '1 ano',
     price: 79.9,
+    link: 'https://checkout-mp.vorticehub.com.br/mp7990.php',
   },
 ]
 
@@ -42,12 +46,20 @@ export function Plans() {
             R$ {plan.price.toFixed(2).replace('.', ',')}
           </p>
 
-          <Button
+          {/* <Button
             onClick={() => handleNavigatePayment(plan.id)}
             className='mt-4 inline-block bg-lime-500 text-zinc-900 px-4 py-2 rounded-lg font-semibold hover:bg-lime-600 transition'
           >
             Assine agora
-          </Button>
+          </Button> */}
+
+          <a
+            href={plan.link}
+            target='_blank'
+            className='mt-4 inline-block bg-lime-500 text-zinc-900 px-4 py-2 rounded-lg font-semibold hover:bg-lime-600 transition'
+          >
+            Assine agora
+          </a>
         </div>
       ))}
     </div>
