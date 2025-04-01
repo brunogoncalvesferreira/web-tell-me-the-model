@@ -10,6 +10,8 @@ import apple from '@/assets/images/apple.svg'
 import xiaomi from '@/assets/images/xiaomi.svg'
 import motorola from '@/assets/images/motorola.png'
 
+const encode = encodeURI('Olá, gostaria de mais informações sobre o TM3D.')
+
 const model = [
   {
     id: 1,
@@ -65,15 +67,16 @@ export function LandingPageOne() {
         </div>
 
         <div className='flex items-center justify-center mt-32'>
-          <Link
-            to='/contact'
+          <a
+            href={'https://wa.me/5532999716969?text=' + encode}
+            target='_blank'
             className='text-zinc-100 text-lg font-bold border w-fit p-4  flex justify-center items-center rounded hover:bg-lime-400 hover:text-black'
           >
             Fale conosco no WhatsApp
-          </Link>
+          </a>
         </div>
 
-        <div className='flex md:flex-row flex-col items-center justify-center gap-10 mt-32'>
+        <div className='flex items-center justify-center gap-10 flex-wrap  mt-32'>
           {model.map((item) => (
             <img
               key={item.id}
@@ -82,20 +85,6 @@ export function LandingPageOne() {
               alt={item.name}
             />
           ))}
-        </div>
-
-        <div className='mt-32 bg-black h-fit px-6 py-20 space-y-5 border border-lime-400 shadow-2xl shadow-lime-400 rounded-lg'>
-          <h2 className='text-center md:text-4xl text-2xl font-bold'>
-            Experimente Gratuitamente
-          </h2>
-          <p className='text-center text-lg text-zinc-400'>
-            Teste nossa plataforma com um acesso limitado a 10 modelos por
-            marca.
-          </p>
-
-          <button className='text-zinc-100 text-lg font-bold border w-fit p-4 flex justify-center items-center mx-auto rounded hover:bg-lime-400 hover:text-black'>
-            Solicite teste
-          </button>
         </div>
 
         <div className='mt-32 space-y-5 px-6 py-20'>
