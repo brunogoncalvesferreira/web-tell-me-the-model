@@ -164,7 +164,7 @@ export function ListFilms() {
   return (
     <div className='py-10'>
       <h1 className='md:text-4xl text-lg text-zinc-100 font-bold'>
-        Bem-vindo ao TM3D📱
+        📱 TM3D - Encontre películas compatíveis
       </h1>
 
       <div className='flex md:flex-row flex-col-reverse md:gap-0 gap-4 md:space-x-3 space-x-0  mt-10'>
