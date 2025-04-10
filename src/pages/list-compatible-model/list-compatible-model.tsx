@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { FilmsProps } from '../../types/interface'
 import { api } from '../../lib/axios'
 import { toast } from 'sonner'
-import { Trash2 } from 'lucide-react'
+import { ArrowBigLeft, Trash2 } from 'lucide-react'
 import { useAuth } from '../../hooks/auth'
 
 export function ListCompatibleModel() {
@@ -37,15 +37,19 @@ export function ListCompatibleModel() {
 
   return (
     <div className='py-10'>
-      <div className='flex items-center justify-between mb-5'>
+      <div className='flex flex-col gap-2 items-center justify-between mb-5'>
+        <button
+          className='w-10 h-10 rounded-full flex items-center justify-center'
+          onClick={goToBack}
+        >
+          <ArrowBigLeft className='size-5 text-gray-100' />
+        </button>
         <h1 className='md:text-3xl text-lg font-bold'>
           Lista de peliculas compatíveis com{' '}
           <span className='text-lime-400'>
             {listFilmsCompatibles.model?.toLocaleUpperCase()}
           </span>
         </h1>
-
-        <button onClick={goToBack}>Voltar</button>
       </div>
 
       {listFilmsCompatibles.compatibleFilms?.length === 0 ? (
