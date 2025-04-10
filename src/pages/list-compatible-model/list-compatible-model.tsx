@@ -39,7 +39,7 @@ export function ListCompatibleModel() {
     <div className='py-10'>
       <div className='flex flex-col gap-2 mb-5'>
         <button
-          className='w-10 h-10 bg-lime-400 rounded-full flex items-center justify-center'
+          className='w-10 h-10 ml-auto bg-lime-400 rounded-full flex items-center justify-center'
           onClick={goToBack}
         >
           <ArrowBigLeft className='size-5 text-gray-100' />
