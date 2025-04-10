@@ -36,6 +36,7 @@ export function Header({ signOut }: HeaderProps) {
           </ul>
           {user ? (
             <>
+              <Link to={'/register-user-tm'}>Cadastrar usuário</Link>
               <button
                 onClick={() => signOut()}
                 className='text-zinc-100 text-lg font-bold flex items-center gap-2'
@@ -43,8 +44,6 @@ export function Header({ signOut }: HeaderProps) {
                 sair
                 <LogOut className='size-4' />
               </button>
-
-              <Link to={'/register-user-tm'}>Cadastrar usuário</Link>
             </>
           ) : (
             <Link
